@@ -3,12 +3,77 @@ title: Google AMP sample
 layout: amp
 ---
 
-<h1>Google AMP button example.</h1>
+<h1>Google AMP button: standard donation flow.</h1>
 <!-- PressPatron button that can be copied to any location -->
-<button class="presspatron-modal-link" on="tap:presspatron-modal">Donate $10 per month</button>
+<button class="presspatron-modal-link" on="tap:presspatron-modal-standard">Donate any amount</button>
 
 <!-- PressPatron AMP lightbox that serves as the popup modal -->
-<amp-lightbox id="presspatron-modal" layout="nodisplay">
+<amp-lightbox id="presspatron-modal-standard" layout="nodisplay">
+  <a href="#" class="pp-modal-close" on="tap:presspatron-modal.close">
+    <amp-img
+      src="https://dashboard.presspatron.com/images/close-icon.svg"
+      alt="Close PressPatron modal"
+      width="24"
+      height="24"
+    ></amp-img>
+  </a>
+  <div class="pp-modal-content">
+    <amp-iframe
+      width="300"
+      height="450"
+      sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"
+      layout="fill"
+      frameborder="0"
+      src="https://dashboard.presspatron.com/donations/new?amp=1&frame=1&t=tLoamTeEEycJxCdpNhBNwkoj"
+    >
+      <!-- The below placeholder contains PressPatron branding and an AMP placeholder for while the modal is loading -->
+      <!-- Note: the placeholder is required for PressPatron to display near the top of the page. Removing the placeholder will likely stop the modal from working -->
+      <div placeholder>
+        <div class="pp-placeholder-content"></div>
+      </div>
+    </amp-iframe>
+  </div>
+</amp-lightbox>
+
+
+<h1>Google AMP button: pay-what-you-want.</h1>
+<!-- PressPatron button that can be copied to any location -->
+<button class="presspatron-modal-link" on="tap:presspatron-modal-pwyw">Donate any amount</button>
+
+<!-- PressPatron AMP lightbox that serves as the popup modal -->
+<amp-lightbox id="presspatron-modal-pwyw" layout="nodisplay">
+  <a href="#" class="pp-modal-close" on="tap:presspatron-modal.close">
+    <amp-img
+      src="https://dashboard.presspatron.com/images/close-icon.svg"
+      alt="Close PressPatron modal"
+      width="24"
+      height="24"
+    ></amp-img>
+  </a>
+  <div class="pp-modal-content">
+    <amp-iframe
+      width="300"
+      height="450"
+      sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"
+      layout="fill"
+      frameborder="0"
+      src="https://dashboard.presspatron.com/donations/new?amp=1&frame=1&t=tLoamTeEEycJxCdpNhBNwkoj&page=pwyw"
+    >
+      <!-- The below placeholder contains PressPatron branding and an AMP placeholder for while the modal is loading -->
+      <!-- Note: the placeholder is required for PressPatron to display near the top of the page. Removing the placeholder will likely stop the modal from working -->
+      <div placeholder>
+        <div class="pp-placeholder-content"></div>
+      </div>
+    </amp-iframe>
+  </div>
+</amp-lightbox>
+
+<h1>Google AMP button: $10 per month.</h1>
+<!-- PressPatron button that can be copied to any location -->
+<button class="presspatron-modal-link" on="tap:presspatron-modal-10-month">Donate $10 per month</button>
+
+<!-- PressPatron AMP lightbox that serves as the popup modal -->
+<amp-lightbox id="presspatron-modal-10-month" layout="nodisplay">
   <a href="#" class="pp-modal-close" on="tap:presspatron-modal.close">
     <amp-img
       src="https://dashboard.presspatron.com/images/close-icon.svg"
@@ -25,6 +90,39 @@ layout: amp
       layout="fill"
       frameborder="0"
       src="https://dashboard.presspatron.com/donations/new?amp=1&frame=1&t=tLoamTeEEycJxCdpNhBNwkoj&page=checkout&amount=10&frequency=monthly"
+    >
+      <!-- The below placeholder contains PressPatron branding and an AMP placeholder for while the modal is loading -->
+      <!-- Note: the placeholder is required for PressPatron to display near the top of the page. Removing the placeholder will likely stop the modal from working -->
+      <div placeholder>
+        <div class="pp-placeholder-content"></div>
+      </div>
+    </amp-iframe>
+  </div>
+</amp-lightbox>
+
+
+<h1>Google AMP button: $100 per year.</h1>
+<!-- PressPatron button that can be copied to any location -->
+<button class="presspatron-modal-link" on="tap:presspatron-modal-100-year">Donate $100 per year</button>
+
+<!-- PressPatron AMP lightbox that serves as the popup modal -->
+<amp-lightbox id="presspatron-modal-100-year" layout="nodisplay">
+  <a href="#" class="pp-modal-close" on="tap:presspatron-modal.close">
+    <amp-img
+      src="https://dashboard.presspatron.com/images/close-icon.svg"
+      alt="Close PressPatron modal"
+      width="24"
+      height="24"
+    ></amp-img>
+  </a>
+  <div class="pp-modal-content">
+    <amp-iframe
+      width="300"
+      height="450"
+      sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"
+      layout="fill"
+      frameborder="0"
+      src="https://dashboard.presspatron.com/donations/new?amp=1&frame=1&t=tLoamTeEEycJxCdpNhBNwkoj&page=checkout&amount=10&frequency=annual"
     >
       <!-- The below placeholder contains PressPatron branding and an AMP placeholder for while the modal is loading -->
       <!-- Note: the placeholder is required for PressPatron to display near the top of the page. Removing the placeholder will likely stop the modal from working -->
